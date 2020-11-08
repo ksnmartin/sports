@@ -103,11 +103,30 @@ component: WeightliftingComponent
 ]
 
 @NgModule({
-  declarations: [TeamComponent],
+  declarations: [TeamComponent,
+  AquaticsComponent,
+  AthleticsComponent,
+    BadmintonComponent,
+    BasketballComponent,
+    BoxingComponent,
+    ChessComponent,
+    CricketComponent,
+    FootballComponent,
+    HandballComponent,
+    HockeyComponent,
+    KabbadiComponent,
+    KhokhoComponent,
+    SquashComponent,
+    TabletennisComponent,
+    VolleyballComponent,
+    TennisComponent,
+    TkdComponent,
+    WeightliftingComponent],
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
     MatGridListModule
-  ]
+  ],
+  exports:[MatGridListModule]
 })
 export class TeamModule { }

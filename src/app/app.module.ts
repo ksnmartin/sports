@@ -25,25 +25,7 @@ import { WeightliftingComponent } from './weightlifting/weightlifting.component'
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AquaticsComponent,
-    AthleticsComponent,
-    BadmintonComponent,
-    BasketballComponent,
-    BoxingComponent,
-    ChessComponent,
-    CricketComponent,
-    FootballComponent,
-    HandballComponent,
-    HockeyComponent,
-    KabbadiComponent,
-    KhokhoComponent,
-    SquashComponent,
-    TabletennisComponent,
-    VolleyballComponent,
-    TennisComponent,
-    TkdComponent,
-    WeightliftingComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

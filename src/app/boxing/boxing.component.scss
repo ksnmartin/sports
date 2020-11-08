@@ -1,0 +1,137 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.home{
+    background:url("../../assets/boxing/bg.jpeg");
+    height:700px;
+    background-size: cover;
+    position: relative;
+}
+
+.navbar{
+    height:70px;
+    position:relative;
+    top:0px;
+}
+.img1{
+    width: 400px;
+    height: 400px;
+    border-radius: 0%;
+}
+.links{
+    float:right;
+    position:relative;
+    height:100%;
+    width :40%;
+    display: flex;
+    align-items: center;
+}
+
+.text{
+    position: relative ;
+        top: 110px;
+    left: 140px;
+}
+h2{
+    font-size: 40px;
+    line-height: 50px;
+    color:white;
+}
+h1{
+    color:white;
+}
+
+.l{
+    width: 20%;
+    height:100%;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-size: 16px;
+    font-weight: 300;
+}
+.l:hover{
+    color:green;
+}
+
+.fa {  
+	width: 25px;
+    padding: 10px;
+	font-size: 25px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+	color: white;
+	border-radius: 10%; 
+			}
+
+.fa-phone{
+	background: green;
+	font-size: 10px;
+	width:10px;
+}
+p{
+	font-size:24px;
+}
+
+.fa-mobile-phone{
+    font-size:10px;
+    width:10px;
+}
+.fa-facebook {
+			  background: #3B5998;
+			}
+
+.fa-twitter {
+			  background: #55ACEE;
+			}
+
+.fa-linkedin {
+			  background: #007bb5;
+			}
+img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+        }
+
+.card{
+	 width:300px;
+  height:295px;
+  border-radius: 25px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                0 2px 4px rgba(0,0,0,0.07), 
+                0 4px 8px rgba(0,0,0,0.07), 
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07), 
+                0 32px 64px rgba(0,0,0,0.07);
+	display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.cont{
+	display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+}
+.no{
+	font-size:24px;
+}
+
+.title{
+	height:70px;
+	width:100%;
+	font-size:20px;
+	justify-content:center;
+    font-size:25px;
+    text-transform: uppercase;
+        font-weight: 900;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:center;
+}
