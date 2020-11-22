@@ -67,8 +67,6 @@ icons = """<div>
 </div>"""
 
 css ="""
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-
 .home{
     background:url("../../assets/boxing/bg.jpeg");
     height:700px;
@@ -84,7 +82,7 @@ css ="""
 .img1{
     width: 400px;
     height: 400px;
-    border-radius: 0%;
+    border-radius: 10%;
 }
 .links{
     float:right;
@@ -97,8 +95,10 @@ css ="""
 
 .text{
     position: relative ;
-        top: 110px;
+    top: 110px;
     left: 140px;
+    height: 400px;
+    width: 700px;
 }
 h2{
     font-size: 40px;
@@ -232,7 +232,7 @@ for sport in sports:
 		print("</mat-grid-tile>\n")
 	print("</mat-grid-list>")
 	print("""<div class="title">Gallery</div>
-	<mat-grid-list cols=3 rowHeight='400px'>""")
+	<mat-grid-list cols=2 rowHeight='420px'>""")
 	for i in range(1,11):
 		print("<mat-grid-tile>")
 		print("""<img class="img1" src="../../assets/boxing/"""+str(i)+""".jpeg">""")
