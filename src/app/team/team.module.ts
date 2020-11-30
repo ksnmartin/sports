@@ -20,7 +20,7 @@ import { VolleyballComponent } from '../volleyball/volleyball.component';
 import { TennisComponent } from '../tennis/tennis.component';
 import { TkdComponent } from '../tkd/tkd.component';
 import { WeightliftingComponent } from '../weightlifting/weightlifting.component';
-
+import { NgImageSliderModule } from 'ng-image-slider';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 const routes: Routes = [
@@ -125,7 +125,8 @@ component: WeightliftingComponent
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
-    MatGridListModule
+    MatGridListModule,
+    NgImageSliderModule
   ],
   exports:[MatGridListModule]
 })

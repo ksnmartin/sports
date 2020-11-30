@@ -158,9 +158,11 @@ p{
 }
 
 .text{
-    position: relative ;
-        top: 150px;
-    left: 150px;
+position: relative;
+    top: 150px;
+    right: 150px;
+    width: 500px;
+    float: right;
 }
 h2{
     font-size: 40px;

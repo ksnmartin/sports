@@ -66,9 +66,11 @@ icons = """<div>
 	<div class='fa fa-instagram'></div>
 </div>"""
 
-css ="""
+css1 ="""
 .home{
-    background:url("../../assets/boxing/bg.jpeg");
+    background:url("../../assets/"""
+
+css=""".jpg");
     height:700px;
     background-size: cover;
     position: relative;
@@ -233,12 +235,12 @@ for sport in sports:
 	print("</mat-grid-list>")
 	print("""<div class="title">Gallery</div>
 	<mat-grid-list cols=2 rowHeight='420px'>""")
-	for i in range(1,11):
+	for i in range(1,9):
 		print("<mat-grid-tile>")
-		print("""<img class="img1" src="../../assets/boxing/"""+str(i)+""".jpeg">""")
+		print("""<img class="img1" src="../../assets/"""+dict1[sport]+"/"+str(i)+""".jpg">""")
 		print("</mat-grid-tile>")
 	print("</mat-grid-list>")
 
 for sport in sports:
 	sys.stdout = open("./src/app/"+dict1[sport]+"/"+dict1[sport]+".component.scss","w")
-	print(css)
+	print(css1+dict1[sport]+"/bg"+dict1[sport]+css)

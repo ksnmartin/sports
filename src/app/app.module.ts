@@ -28,7 +28,7 @@ import { WeightliftingComponent } from './weightlifting/weightlifting.component'
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule
   ],
