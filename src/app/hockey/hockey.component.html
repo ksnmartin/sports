@@ -3,13 +3,13 @@
 	<div class="navbar">
 		
 		<div class="links">
-			<div class="l">
-				Sports
+			<div class="l" routerLink='../../'>
+				Home
 			</div>
 			<div class="l">
 				Events
 			</div>
-			<div class="l">
+			<div class="l" routerLink='../'>
 				Team
 			</div>
 			<div class="l">
@@ -23,8 +23,8 @@
 	<div class="text">
 		<h2><b>Hockey Club</b></h2>
 		<h2>IIT BHU Varanasi</h2>
-		<h1>"There is more to boxing than hitting, </h1>
-		<h1>there is not getting hit for example "</h1>
+		<h1>"A hockey stick in the right hands is like a brush  </h1>
+		<h1>and the game is the painting"</h1>
 
 	</div>
 </div>
@@ -35,7 +35,7 @@
 <div><img alt='img' src='../../assets/captain/Hockey(M).jpg'></div>
 <div class='name'><p>Sanjeev Murmu</p></div>
 <div class='posi'><p>Captain (M)</p></div>
-<div class='name'><p>+91 9006991220</p></div>
+<div class='name'><p><i class='fa fa-phone'></i>+91 9006991220</p></div>
 <div>
 	<div class='fa fa-twitter'></div>
 	<div class='fa fa-facebook'></div>
@@ -49,7 +49,7 @@
 <div><img alt='img' src='../../assets/vice_captain/Hockey(M).jpg'></div>
 <div class='name'><p>Surendra Kumar</p></div>
 <div class='posi'><p>Vice Captain (M)</p></div>
-<div class='name'><p>+91 7976962925</p></div>
+<div class='name'><p><i class='fa fa-phone'></i>+91 7976962925</p></div>
 <div>
 	<div class='fa fa-twitter'></div>
 	<div class='fa fa-facebook'></div>
@@ -60,29 +60,4 @@
 
 </mat-grid-list>
 <div class="title">Gallery</div>
-	<mat-grid-list cols=2 rowHeight='420px'>
-<mat-grid-tile>
-<img class="img1" src="../../assets/hockey/1.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/hockey/2.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/hockey/3.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/hockey/4.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/hockey/5.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/hockey/6.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/hockey/7.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/hockey/8.jpg">
-</mat-grid-tile>
-</mat-grid-list>
+<ng-image-slider [images]="imageObject" #nav></ng-image-slider>

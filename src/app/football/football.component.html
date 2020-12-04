@@ -3,13 +3,13 @@
 	<div class="navbar">
 		
 		<div class="links">
-			<div class="l">
-				Sports
+			<div class="l" routerLink='../../'>
+				Home
 			</div>
 			<div class="l">
 				Events
 			</div>
-			<div class="l">
+			<div class="l" routerLink='../'>
 				Team
 			</div>
 			<div class="l">
@@ -23,8 +23,8 @@
 	<div class="text">
 		<h2><b>Football Club</b></h2>
 		<h2>IIT BHU Varanasi</h2>
-		<h1>"There is more to boxing than hitting, </h1>
-		<h1>there is not getting hit for example "</h1>
+		<h1></h1>
+		<h1></h1>
 
 	</div>
 </div>
@@ -35,7 +35,7 @@
 <div><img alt='img' src='../../assets/captain/Football(M).jpg'></div>
 <div class='name'><p>Ritvik Singh</p></div>
 <div class='posi'><p>Captain (M)</p></div>
-<div class='name'><p>+91 9549847995</p></div>
+<div class='name'><p><i class='fa fa-phone'></i>+91 9549847995</p></div>
 <div>
 	<div class='fa fa-twitter'></div>
 	<div class='fa fa-facebook'></div>
@@ -49,7 +49,7 @@
 <div><img alt='img' src='../../assets/vice_captain/Football(M).jpg'></div>
 <div class='name'><p>Jit bhuin</p></div>
 <div class='posi'><p>Vice Captain (M)</p></div>
-<div class='name'><p>+91 7718101053</p></div>
+<div class='name'><p><i class='fa fa-phone'></i>+91 7718101053</p></div>
 <div>
 	<div class='fa fa-twitter'></div>
 	<div class='fa fa-facebook'></div>
@@ -60,29 +60,4 @@
 
 </mat-grid-list>
 <div class="title">Gallery</div>
-	<mat-grid-list cols=2 rowHeight='420px'>
-<mat-grid-tile>
-<img class="img1" src="../../assets/football/1.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/football/2.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/football/3.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/football/4.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/football/5.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/football/6.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/football/7.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/football/8.jpg">
-</mat-grid-tile>
-</mat-grid-list>
+<ng-image-slider [images]="imageObject" #nav></ng-image-slider>

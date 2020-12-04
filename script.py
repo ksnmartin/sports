@@ -2,8 +2,8 @@ import os
 import sys
 import pandas as pd
 arr = ["aquatics","athletics","badminton","basketball","boxing","chess","cricket","football","handball","hockey","kabbadi","khokho","tennis","squash","tabletennis","tkd","volleyball","weightlifting"]
-sports = ['Aquatics', 'Athletics', 'Badminton', 'Basketball', 'Boxing', 'Chess', 'Cricket', 'Football', 'Handball', 'Hockey', 'Kabaddi', 'Khokho', 'LawnTennis', 'Squash', 'TableTennis', 'Taekwondo', 'Vollyeball', 'Weightlifting']
-dict1 = {'Aquatics': 'aquatics', 'Athletics': 'athletics', 'Badminton': 'badminton', 'Basketball': 'basketball', 'Boxing': 'boxing', 'Chess': 'chess', 'Cricket': 'cricket', 'Football': 'football', 'Handball': 'handball', 'Hockey': 'hockey', 'Kabaddi': 'kabbadi', 'Khokho': 'khokho', 'LawnTennis': 'tennis', 'Squash': 'squash', 'TableTennis': 'tabletennis', 'Taekwondo': 'tkd', 'Vollyeball': 'volleyball', 'Weightlifting': 'weightlifting'}
+sports = ['Aquatics', 'Athletics', 'Badminton', 'Basketball', 'Boxing', 'Chess', 'Cricket', 'Football', 'Handball', 'Hockey', 'Kabaddi', 'Khokho', 'LawnTennis', 'Squash', 'TableTennis', 'Taekwondo', 'Volleyball', 'Weightlifting']
+dict1 = {'Aquatics': 'aquatics', 'Athletics': 'athletics', 'Badminton': 'badminton', 'Basketball': 'basketball', 'Boxing': 'boxing', 'Chess': 'chess', 'Cricket': 'cricket', 'Football': 'football', 'Handball': 'handball', 'Hockey': 'hockey', 'Kabaddi': 'kabbadi', 'Khokho': 'khokho', 'LawnTennis': 'tennis', 'Squash': 'squash', 'TableTennis': 'tabletennis', 'Taekwondo': 'tkd', 'Volleyball': 'volleyball', 'Weightlifting': 'weightlifting'}
 
 arr2=[" AquaticsComponent ",
 " AthleticsComponent ",
@@ -17,13 +17,14 @@ arr2=[" AquaticsComponent ",
 " HockeyComponent ",
 " KabbadiComponent ",
 " KhokhoComponent ",
+" TennisComponent ",
 " SquashComponent ",
 " TabletennisComponent ",
-" VolleyballComponent ",
-" TennisComponent ",
 " TkdComponent ",
+" VolleyballComponent ",
 " WeightliftingComponent "]
 
+dict2= {'Aquatics': ' AquaticsComponent ', 'Athletics': ' AthleticsComponent ', 'Badminton': ' BadmintonComponent ', 'Basketball': ' BasketballComponent ', 'Boxing': ' BoxingComponent ', 'Chess': ' ChessComponent ', 'Cricket': ' CricketComponent ', 'Football': ' FootballComponent ', 'Handball': ' HandballComponent ', 'Hockey': ' HockeyComponent ', 'Kabaddi': ' KabbadiComponent ', 'Khokho': ' KhokhoComponent ', 'LawnTennis': ' TennisComponent ', 'Squash': ' SquashComponent ', 'TableTennis': ' TabletennisComponent ', 'Taekwondo': ' TkdComponent ', 'Volleyball': ' VolleyballComponent ', 'Weightlifting': ' WeightliftingComponent '}
 data = pd.read_excel("data.xlsx")
 
 a1= """
@@ -31,13 +32,13 @@ a1= """
 	<div class="navbar">
 		
 		<div class="links">
-			<div class="l">
-				Sports
+			<div class="l" routerLink='../../'>
+				Home
 			</div>
 			<div class="l">
 				Events
 			</div>
-			<div class="l">
+			<div class="l" routerLink='../'>
 				Team
 			</div>
 			<div class="l">
@@ -51,13 +52,133 @@ a1= """
 	<div class="text">
 		<h2><b>"""
 
-a2=""" Club</b></h2>
+dict4= {'Aquatics': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1>"Swimming is a confusing sport sometimes you do it to win</h1>
+		<h1>an sometimes you do it to stay alive"</h1>
+
+	</div>
+</div>""",
+ 'Athletics':""" Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1>"An athlete must run with dreams in his head</h1>
+		<h1>and hope in his heart "</h1>
+
+	</div>
+</div>""",
+ 'Badminton': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1>"Badminton is like ballet dancing, it requires a lot control,</h1>
+		<h1> strength, and mind-play and measured movement"</h1>
+
+	</div>
+</div>""",
+ 'Basketball': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1>"Basketball is like photograhpy, if you dont focus, </h1>
+		<h1>all you are left with is the negative"</h1>
+
+	</div>
+</div>""",
+ 'Boxing': """ Club</b></h2>
 		<h2>IIT BHU Varanasi</h2>
 		<h1>"There is more to boxing than hitting, </h1>
 		<h1>there is not getting hit for example "</h1>
 
 	</div>
-</div>"""
+</div>""",
+ 'Chess': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1>"Chess is a fairy tale of 1001 blunders, </h1>
+		<h1>Without error there can be no brilliancy "</h1>
+
+	</div>
+</div>""",
+ 'Cricket': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1></h1>
+		<h1></h1>
+
+	</div>
+</div>""",
+ 'Football': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1></h1>
+		<h1></h1>
+
+	</div>
+</div>""",
+ 'Handball': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1></h1>
+		<h1></h1>
+
+	</div>
+</div>""",
+ 'Hockey': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1>"A hockey stick in the right hands is like a brush  </h1>
+		<h1>and the game is the painting"</h1>
+
+	</div>
+</div>""",
+ 'Kabaddi': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1>"Kabbadi defies physics ,once you touch the opponent</h1>
+		<h1>the distance to the line increases"</h1>
+
+	</div>
+</div>""",
+ 'Khokho': """</b></h2>
+		<h2></h2>
+		<h1></h1>
+		<h1></h1>
+
+	</div>
+</div>""" ,
+ 'LawnTennis': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1>"Tennis is a perfect combination of violent action </h1>
+		<h1>taking place in an atmosphere of total tranquility"</h1>
+
+	</div>
+</div>""",
+ 'Squash': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1></h1>
+		<h1></h1>
+
+	</div>
+</div>""",
+ 'TableTennis': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1>"To face a good opponent on the other end</h1>
+		<h1>of the table is a privlege"</h1>
+
+	</div>
+</div>""",
+ 'Taekwondo': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1>"courtesy, integrity, perseverance, self-control and</h1>
+		<h1>indomitable spirit ,without these taekwondo is just kicking"</h1>
+
+	</div>
+</div>""",
+ 'Volleyball': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1>"A good team can win a volleyball game when they are ahead, </h1>
+		<h1>but only a great team can win when they are behind"</h1>
+
+	</div>
+</div>""",
+ 'Weightlifting': """ Club</b></h2>
+		<h2>IIT BHU Varanasi</h2>
+		<h1>"If you think lifting is dangerous, try being weak.</h1>
+		<h1>Being weak is dangerous"</h1>
+
+	</div>
+</div>"""}
+
 
 title ="""<div class="title">Captains and Vice-Captains</div>"""
 icons = """<div>
@@ -125,6 +246,10 @@ h1{
     color:green;
 }
 
+.l:focus{
+    outline:0;
+}
+
 .fa {  
 	width: 25px;
     padding: 10px;
@@ -145,9 +270,10 @@ p{
 	font-size:24px;
 }
 
-.fa-mobile-phone{
-    font-size:10px;
-    width:10px;
+.fa-phone{
+	background: green;
+	font-size: 10px;
+	width:10px;
 }
 .fa-facebook {
 			  background: #3B5998;
@@ -214,7 +340,10 @@ for sport in sports:
 	n = len(df)
 	if n > 3:
 		n =2
-	print(a1+sport+a2)
+	if sport == "Khokho":
+		print(a1+dict4[sport])
+	else:
+		print(a1+sport+dict4[sport])
 	print(title)
 	print("<mat-grid-list cols="+str(n)+" rowHeight='450px'>")
 	for index, i in df.iterrows():
@@ -228,19 +357,44 @@ for sport in sports:
 		print("<div><img alt='img' src='../../assets/"+path+"></div>")
 		print("<div class='name'><p>"+i["Name of position holder"]+"</p></div>")
 		print("<div class='posi'><p>"+i["Position"]+"</p></div>")
-		print("<div class='name'><p>+91 "+str(i["Contact no."])+"</p></div>")
+		print("<div class='name'><p><i class='fa fa-phone'></i>+91 "+str(i["Contact no."])+"</p></div>")
 		print(icons)
 		print("</div>")
 		print("</mat-grid-tile>\n")
 	print("</mat-grid-list>")
-	print("""<div class="title">Gallery</div>
-	<mat-grid-list cols=2 rowHeight='420px'>""")
-	for i in range(1,9):
-		print("<mat-grid-tile>")
-		print("""<img class="img1" src="../../assets/"""+dict1[sport]+"/"+str(i)+""".jpg">""")
-		print("</mat-grid-tile>")
-	print("</mat-grid-list>")
+	print("""<div class="title">Gallery</div>""")
+	print("""<ng-image-slider [images]="imageObject" #nav></ng-image-slider>""")
 
 for sport in sports:
 	sys.stdout = open("./src/app/"+dict1[sport]+"/"+dict1[sport]+".component.scss","w")
 	print(css1+dict1[sport]+"/bg"+dict1[sport]+css)
+
+ts = """import { Component, OnInit } from '@angular/core';
+
+@Component({
+"""
+for sport in sports:
+	sys.stdout = open("./src/app/"+dict1[sport]+"/"+dict1[sport]+".component.ts","w")
+	files = os.listdir("./src/assets/"+dict1[sport])
+	files.remove("bg"+dict1[sport]+".jpg")
+	print(ts)
+	print("""selector: 'app-"""+dict1[sport]+"',")
+	print("""templateUrl: './"""+dict1[sport]+".component.html',")
+	print("""styleUrls: ['./"""+dict1[sport]+".component.scss']")
+	print("})\n\n")
+	print("export class " + dict2[sport] + " implements OnInit {")
+	print("  imageObject: Array<object> = [")
+	for i in files:
+		print("{\nimage: '../../assets/"+dict1[sport]+'/'+str(i)+"',")
+		print("thumbImage: '../../assets/"+dict1[sport]+'/'+str(i)+"',")
+		print("""alt: 'image',
+        title: ' '
+    },""")
+	print("""];
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}""")

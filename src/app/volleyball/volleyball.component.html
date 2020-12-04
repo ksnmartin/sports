@@ -3,13 +3,13 @@
 	<div class="navbar">
 		
 		<div class="links">
-			<div class="l">
-				Sports
+			<div class="l" routerLink='../../'>
+				Home
 			</div>
 			<div class="l">
 				Events
 			</div>
-			<div class="l">
+			<div class="l" routerLink='../'>
 				Team
 			</div>
 			<div class="l">
@@ -21,10 +21,10 @@
 		</div>
 	</div>
 	<div class="text">
-		<h2><b>Vollyeball Club</b></h2>
+		<h2><b>Volleyball Club</b></h2>
 		<h2>IIT BHU Varanasi</h2>
-		<h1>"There is more to boxing than hitting, </h1>
-		<h1>there is not getting hit for example "</h1>
+		<h1>"A good team can win a volleyball game when they are ahead, </h1>
+		<h1>but only a great team can win when they are behind"</h1>
 
 	</div>
 </div>
@@ -32,10 +32,10 @@
 <mat-grid-list cols=2 rowHeight='450px'>
 <mat-grid-tile>
 <div class='card'>
-<div><img alt='img' src='../../assets/vice_captain/Vollyeball(M).jpg'></div>
+<div><img alt='img' src='../../assets/vice_captain/Volleyball(M).jpg'></div>
 <div class='name'><p>Himanshu Kumar</p></div>
 <div class='posi'><p>Vice Captain (M)</p></div>
-<div class='name'><p>+91 6205397368</p></div>
+<div class='name'><p><i class='fa fa-phone'></i>+91 6205397368</p></div>
 <div>
 	<div class='fa fa-twitter'></div>
 	<div class='fa fa-facebook'></div>
@@ -46,10 +46,10 @@
 
 <mat-grid-tile>
 <div class='card'>
-<div><img alt='img' src='../../assets/vice_captain/Vollyeball(W).jpg'></div>
+<div><img alt='img' src='../../assets/vice_captain/Volleyball(W).jpg'></div>
 <div class='name'><p>Pooja Gupta</p></div>
 <div class='posi'><p>Vice Captain (W)</p></div>
-<div class='name'><p>+91 7619918058</p></div>
+<div class='name'><p><i class='fa fa-phone'></i>+91 7619918058</p></div>
 <div>
 	<div class='fa fa-twitter'></div>
 	<div class='fa fa-facebook'></div>
@@ -60,10 +60,10 @@
 
 <mat-grid-tile>
 <div class='card'>
-<div><img alt='img' src='../../assets/captain/Vollyeball(M).jpg'></div>
+<div><img alt='img' src='../../assets/captain/Volleyball(M).jpg'></div>
 <div class='name'><p>Roshan Lal Sahu</p></div>
 <div class='posi'><p>Captain (M)</p></div>
-<div class='name'><p>+91 9695534888</p></div>
+<div class='name'><p><i class='fa fa-phone'></i>+91 9695534888</p></div>
 <div>
 	<div class='fa fa-twitter'></div>
 	<div class='fa fa-facebook'></div>
@@ -74,10 +74,10 @@
 
 <mat-grid-tile>
 <div class='card'>
-<div><img alt='img' src='../../assets/captain/Vollyeball(W).jpg'></div>
+<div><img alt='img' src='../../assets/captain/Volleyball(W).jpg'></div>
 <div class='name'><p>Ami Indurkhya</p></div>
 <div class='posi'><p>Captain (W)</p></div>
-<div class='name'><p>+91 9131529880</p></div>
+<div class='name'><p><i class='fa fa-phone'></i>+91 9131529880</p></div>
 <div>
 	<div class='fa fa-twitter'></div>
 	<div class='fa fa-facebook'></div>
@@ -88,29 +88,4 @@
 
 </mat-grid-list>
 <div class="title">Gallery</div>
-	<mat-grid-list cols=2 rowHeight='420px'>
-<mat-grid-tile>
-<img class="img1" src="../../assets/volleyball/1.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/volleyball/2.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/volleyball/3.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/volleyball/4.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/volleyball/5.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/volleyball/6.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/volleyball/7.jpg">
-</mat-grid-tile>
-<mat-grid-tile>
-<img class="img1" src="../../assets/volleyball/8.jpg">
-</mat-grid-tile>
-</mat-grid-list>
+<ng-image-slider [images]="imageObject" #nav></ng-image-slider>

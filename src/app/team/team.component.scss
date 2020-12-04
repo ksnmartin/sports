@@ -75,6 +75,9 @@ p{
 .l:hover{
 	color:green;
 }
+.l:focus{
+    outline:0;
+}
 
 .clubs{
 	width:100%;
@@ -159,7 +162,7 @@ p{
 
 .text{
 position: relative;
-    top: 150px;
+    top: 100px;
     right: 150px;
     width: 500px;
     float: right;

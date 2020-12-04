@@ -8,7 +8,7 @@ import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
 
-const domino = require('domino');
+ const domino = require('domino');
 const fs = require('fs');
 const path = require('path');
 
@@ -21,6 +21,9 @@ const template = fs
 const window = domino.createWindow(template);
 global['window'] = window;
 global['document'] = window.document;
+
+(global as any).WebSocket = require('ws');
+(global as any).XMLHttpRequest = require('xhr2');
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
@@ -51,14 +54,14 @@ export function app(): express.Express {
 }
 
 function run(): void {
-  const port = process.env.PORT || 4000;
+    const port = process.env.PORT || 4000;
 
   // Start up the Node server
-  const server = app();
+    const server = app();
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
-}
+ }
 
 // Webpack will replace 'require' with '__webpack_require__'
 // '__non_webpack_require__' is a proxy to Node 'require'
