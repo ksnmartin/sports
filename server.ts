@@ -11,7 +11,7 @@ const compression = require('compression');
 const parser = require('ua-parser-js');
 // Use the browser index.html as template for the mock window
 const template = fs
-  .readFileSync(path.join(join(process.cwd(), 'sports/browser'), 'index.html'))
+  .readFileSync(path.join(join(process.cwd(), 'dist/sports/browser'), 'index.html'))
   .toString();
 
 // Shim for the global window and document objects.
@@ -55,7 +55,7 @@ const mid = function mobile(req,res,next) {
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
-  const distFolder = join(process.cwd(), 'sports/browser');
+  const distFolder = join(process.cwd(), 'dist/sports/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
   server.use(compression({ filter: shouldCompress }));
