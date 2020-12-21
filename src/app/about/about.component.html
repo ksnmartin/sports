@@ -2,7 +2,7 @@
 	<div class="navbar">
 		<img src="../../assets/logo1.png" height="70px">
 		<div class="links">
-			<div class="l">
+			<div class="l" routerLink='team' fragment='sports' >
 				Sports
 			</div>
 			<div class="l">
@@ -11,7 +11,7 @@
 			<div class="l" routerLink='team'>
 				Team
 			</div>
-			<div class="l">
+			<div class="l" (click)="scrolling('contacts')">
 				Contacts
 			</div>
 			<div class="l">
@@ -59,30 +59,31 @@
 	<div class="det">
 		<div class="title">Social media</div>
  <div class="icons">
- 	<div class='fa fa-twitter'></div>
  	<div class='fa fa-facebook'></div>
- 	<div class='fa fa-youtube'></div>
  	<div class='fa fa-instagram'></div>
  </div>
- <div class="title">Relavent links</div>
+ <div class="title">Relevant links</div>
 <div class="srcs">
 	<li><a href="https://iitbhu.ac.in/">IIT BHU</a></li>
 	<li><a href="https://spardha.co.in/?i=1">Spardha</a></li>
 </div>
 	</div>
 	<div class="det">
-		<div class="title">Contacts</div>
+		<div class="title" id='contacts'>Contacts</div>
 		<div class="cont">
 			<ul class="fa-ul">
-				<li>Akshit Kumar General Secretary</li>
-  <li><i class="fa-li fa fa-phone"></i>+91-7237874633</li>
+				<li><i class="fa-li fa-user fa"></i>Akshit Kumar General Secretary</li>
+  <li><i class="fa-li fa fa-phone"></i>+91 9041437517</li>
   <li><i class="fa-li fa fa-envelope" ></i>gensec.sports@iitbhu.ac.in</li>
-  <li>Akash Kumar Joint Secretary</li>
-  <li><i class="fa-li fa fa-phone"></i>+91-7237874633</li>
-  <li>Harshit Kumar Joint Secretary</li>
-  <li><i class="fa-li fa fa-phone"></i>+91-7237874633</li>
-  <li>Bandi Gayatri Joint Secretary</li>
-    <li><i class="fa-li fa fa-phone"></i>+91-7237874633</li>
+  <li><div style="width: 100%;height: 40px;"></div></li>
+  <li><i class="fa-li fa-user fa"></i>Akash Kumar Joint Secretary</li>
+  <li><i class="fa-li fa fa-phone"></i>+91 9412541836</li>
+  <li><div style="width: 100%;height: 40px;"></div></li>
+  <li><i class="fa-li fa-user fa"></i>Harshit Agarwal Joint Secretary</li>
+  <li><i class="fa-li fa fa-phone"></i>+91 9521413848</li>
+  <li><div style="width: 100%;height: 40px;"></div></li>
+  <li><i class="fa-li fa-user fa"></i>Bandi Gayatri Joint Secretary</li>
+    <li><i class="fa-li fa fa-phone"></i>+91 9573159217</li>
 </ul>
 		</div>
 	</div>

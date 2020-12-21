@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
+import { Title } from '@angular/platform-browser';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
 
@@ -64,17 +67,20 @@ thumbImage: '../../assets/basketball/9.jpg',
 alt: 'image',
         title: ' '
     },
-{
-image: '../../assets/basketball/captain_boys.png',
-thumbImage: '../../assets/basketball/captain_boys.png',
-alt: 'image',
-        title: ' '
-    },
 ];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private titleService: Title, private metaService: Meta,private scroll : ViewportScroller) { this.titleService.setTitle('Basketball');
+  this.metaService.addTags([
+      {name: 'keywords', content:'IIT (BHU),Basketball'},
+      {name: 'description', content: 'IIT (BHU) Varanasi Basketball teams website page, list of captains and vice-captains and links to the clubs social media'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'}
+      ]);
+      }
+      ngOnInit(): void {
+  }
+  public scrolling(ID : string):void {
+    this.scroll.scrollToAnchor(ID);
   }
 
 }
+

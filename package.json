@@ -30,13 +30,18 @@
     "@angular/router": "~10.2.0",
     "@nguniversal/express-engine": "^10.1.0",
     "angular-cli-ghpages": "^0.6.2",
+    "bufferutil": "^4.0.2",
+    "compression": "^1.7.4",
     "domino": "^2.1.6",
     "express": "^4.15.2",
+    "express-mobile-redirect": "^1.2.0",
     "firebase": "^7.0.0 || ^8.0.0",
     "ng-image-slider": "^2.6.4",
     "rxjs": "~6.6.0",
     "save-dev": "0.0.1-security",
     "tslib": "^2.0.0",
+    "ua-parser-js": "^0.7.22",
+    "utf-8-validate": "^5.0.3",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

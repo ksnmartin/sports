@@ -8,11 +8,11 @@
 			<div class="l">
 				Events
 			</div>
-			<div class="l">
-				Team
+			<div (click)="scrolling('sports')" class="l">
+				Sports
 			</div>
 			<div class="l">
-				Contacts
+				Contact
 			</div>
 			<div class="l">
 				Feedback
@@ -29,8 +29,8 @@
 <mat-grid-list cols=2 rowHeight="450px">
 <mat-grid-tile>	
 	<div class="card">
-		<img class="img1" src="../../assets/bnrai.jpg">
-		<div class='name'><p>Prof B.N. Rai</p></div>
+		<img class="img1" src="../../assets/pkmisrha.jpg">
+		<div class='name'><p>Prof P.K Mishra</p></div>
 <div class='posi'><p>Dean (Student's Affairs)</p></div>
 	</div>
 </mat-grid-tile>
@@ -49,7 +49,7 @@
 			<img class="img1"  src="../../assets/secs/gensec.jpg">
 <div class='name'><p>Akshit Kumar</p></div>
 <div class='posi'><p>General Secretary</p></div>
-<div class='cont'><div class="fa fa-phone"></div><div class="no">+91 8108969962</div></div>
+<div class='cont'><div class="fa fa-phone"></div><div class="no">+91 9041437517</div></div>
 <div><div class="fa fa-twitter"></div>
 <div class="fa fa-facebook"></div>
 <div class="fa fa-linkedin"></div></div>
@@ -62,7 +62,7 @@
 			<img class="img1"  src="../../assets/secs/jtgensec_gayatri.jpg">
 			<div class='name'><p>Gayatri Bandi</p></div>
 <div class='posi'><p>Joint Secretary</p></div>
-<div class='cont'><div class="fa fa-phone"></div><div class="no">+91 8108969962</div></div>
+<div class='cont'><div class="fa fa-phone"></div><div class="no">+91 9573159217</div></div>
 <div><div class="fa fa-twitter"></div>
 <div class="fa fa-facebook"></div>
 <div class="fa fa-linkedin"></div></div>
@@ -73,7 +73,7 @@
 				<img class="img1"  src="../../assets/secs/jtsec_akash.jpg">
 				<div class='name'><p>Akash Kumar</p></div>
 <div class='posi'><p>Joint Secretary</p></div>
-<div class='cont'><div class="fa fa-phone"></div><div class="no">+91 8108969962</div></div>
+<div class='cont'><div class="fa fa-phone"></div><div class="no">+91 94125 41836</div></div>
 <div><div class="fa fa-twitter"></div>
 <div class="fa fa-facebook"></div>
 <div class="fa fa-linkedin"></div></div>
@@ -84,7 +84,7 @@
 				<img class="img1"  src="../../assets/secs/jtsec_harsh.jpg">
 				<div class='name'><p>Harshit Aggarwal</p></div>
 <div class='posi'><p>Joint Secretary</p></div>
-<div class='cont'><div class="fa fa-phone"></div><div class="no">+91 8108969962</div></div>
+<div class='cont'><div class="fa fa-phone"></div><div class="no">+91 9521413848</div></div>
 <div><div class="fa fa-twitter"></div>
 <div class="fa fa-facebook"></div>
 <div class="fa fa-linkedin"></div></div>
@@ -92,24 +92,24 @@
 		</mat-grid-tile>
 </mat-grid-list>
 
-<div class="title"><div>Sports we play</div></div>
+<div class="title" id="sports"><div>Sports Captains and Vice-Captains</div></div>
 <div class="clubs"><mat-grid-list cols="6">
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/aquatics.svg' height =50px width =50px routerLink='aquatics'></div><div><p>aquatics</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/athletics.svg' height =50px width =50px routerLink='athletics'></div><div><p>athletics</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/badminton.svg' height =50px width =50px routerLink='badminton'></div><div><p>badminton</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/basketball.svg' height =50px width =50px routerLink='basketball'></div><div><p>basketball</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/boxing.svg' height =50px width =50px routerLink='boxing'></div><div><p>boxing</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/chess.svg' height =50px width =50px routerLink='chess'></div><div><p>chess</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/cricket.svg' height =50px width =50px routerLink='cricket'></div><div><p>cricket</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/football.svg' height =50px width =50px routerLink='football'></div><div><p>football</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/handball.svg' height =50px width =50px routerLink='handball'></div><div><p>handball</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/hockey.svg' height =50px width =50px routerLink='hockey'></div><div><p>hockey</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/kabaddi.svg' height =50px width =50px routerLink='kabaddi'></div><div><p>kabaddi</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/khokho.svg' height =50px width =50px routerLink='khokho'></div><div><p>khokho</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/squash.svg' height =50px width =50px routerLink='squash'></div><div><p>squash</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/tabletennis.svg' height =50px width =50px routerLink='tabletennis'></div><div><p>tabletennis</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/volleyball.svg' height =50px width =50px routerLink='volleyball'></div><div><p>volleyball</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/tennis.svg' height =50px width =50px routerLink='tennis'></div><div><p>tennis</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/tkd.svg' height =50px width =50px routerLink='tkd'></div><div><p>tkd</p></div></div></mat-grid-tile>
-<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/weightlifting.svg' height =50px width =50px routerLink='weightlifting'></div><div><p>weightlifting</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/aquatics.svg' height =50px width =50px routerLink='aquatics'></div><div><p>Aquatics</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/athletics.svg' height =50px width =50px routerLink='athletics'></div><div><p>Athletics</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/badminton.svg' height =50px width =50px routerLink='badminton'></div><div><p>Badminton</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/basketball.svg' height =50px width =50px routerLink='basketball'></div><div><p>Basketball</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/boxing.svg' height =50px width =50px routerLink='boxing'></div><div><p>Boxing</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/chess.svg' height =50px width =50px routerLink='chess'></div><div><p>Chess</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/cricket.svg' height =50px width =50px routerLink='cricket'></div><div><p>Cricket</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/football.svg' height =50px width =50px routerLink='football'></div><div><p>Football</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/handball.svg' height =50px width =50px routerLink='handball'></div><div><p>Handball</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/hockey.svg' height =50px width =50px routerLink='hockey'></div><div><p>Hockey</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/kabaddi.svg' height =50px width =50px routerLink='kabaddi'></div><div><p>Kabaddi</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/khokho.svg' height =50px width =50px routerLink='khokho'></div><div><p>Khokho</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/squash.svg' height =50px width =50px routerLink='squash'></div><div><p>Squash</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/tabletennis.svg' height =50px width =50px routerLink='tabletennis'></div><div><p>Table Tennis</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/volleyball.svg' height =50px width =50px routerLink='volleyball'></div><div><p>Volleyball</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/tennis.svg' height =50px width =50px routerLink='tennis'></div><div><p>Lawn Tennis</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/tkd.svg' height =50px width =50px routerLink='tkd'></div><div><p>Taekwondo</p></div></div></mat-grid-tile>
+<mat-grid-tile><div class='logo'><div><img src='../../assets/icon/weightlifting.svg' height =50px width =50px routerLink='weightlifting'></div><div><p>Weightlifting</p></div></div></mat-grid-tile>
 </mat-grid-list></div>

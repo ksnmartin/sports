@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
+import { Title } from '@angular/platform-browser';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
 
@@ -11,8 +14,8 @@ styleUrls: ['./tabletennis.component.scss']
 export class  TabletennisComponent  implements OnInit {
   imageObject: Array<object> = [
 {
-image: '../../assets/tabletennis/1.jpg',
-thumbImage: '../../assets/tabletennis/1.jpg',
+image: '../../assets/tabletennis/1.jpeg',
+thumbImage: '../../assets/tabletennis/1.jpeg',
 alt: 'image',
         title: ' '
     },
@@ -48,9 +51,18 @@ alt: 'image',
     },
 ];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private titleService: Title, private metaService: Meta,private scroll : ViewportScroller) { this.titleService.setTitle('Table Tennis');
+  this.metaService.addTags([
+      {name: 'keywords', content:'IIT (BHU),Table Tennis'},
+      {name: 'description', content: 'IIT (BHU) Varanasi Table Tennis teams website page, list of captains and vice-captains and links to the clubs social media'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'}
+      ]);
+      }
+      ngOnInit(): void {
+  }
+  public scrolling(ID : string):void {
+    this.scroll.scrollToAnchor(ID);
   }
 
 }
+

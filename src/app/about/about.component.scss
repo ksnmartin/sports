@@ -46,6 +46,13 @@
 	color:green;
 }
 
+.l:hover{
+	color:green;
+}
+.l:focus{
+    outline:0;
+}
+
 .msg{
 	width:100%;
 	height:450px;
@@ -125,7 +132,6 @@ p{
 
 .details{
 	width:100%;
-	height:700px;
 	background:#222831;
 	 display: flex;
 }
@@ -140,6 +146,7 @@ p{
 	position: relative ;
 	    top: 110px;
     left: 140px;
+    width: 700px;
 }
 h2{
 	font-size: 40px;
@@ -168,7 +175,7 @@ position: relative;
         flex-direction: column;
     justify-content:center;
     width :100%;
-    height:650px;
+    height: auto;
 }
 .srcs{
 	position: relative;

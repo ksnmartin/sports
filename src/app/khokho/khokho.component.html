@@ -12,7 +12,7 @@
 			<div class="l" routerLink='../'>
 				Team
 			</div>
-			<div class="l">
+			<div (click)="scrolling('contacts')" class="l">
 				Contacts
 			</div>
 			<div class="l">
@@ -28,7 +28,7 @@
 
 	</div>
 </div>
-<div class="title">Captains and Vice-Captains</div>
+<div class="title" id='contacts'>Captains and Vice-Captains</div>
 <mat-grid-list cols=3 rowHeight='450px'>
 <mat-grid-tile>
 <div class='card'>

@@ -4,32 +4,63 @@ import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import { join } from 'path';
 
-import { AppServerModule } from './src/main.server';
-import { APP_BASE_HREF } from '@angular/common';
-import { existsSync } from 'fs';
-
- const domino = require('domino');
+const domino = require('domino');
 const fs = require('fs');
 const path = require('path');
-
+const compression = require('compression');
+const parser = require('ua-parser-js');
 // Use the browser index.html as template for the mock window
 const template = fs
-  .readFileSync(path.join(join(process.cwd(), 'dist/sports/browser'), 'index.html'))
+  .readFileSync(path.join(join(process.cwd(), 'sports/browser'), 'index.html'))
   .toString();
 
 // Shim for the global window and document objects.
 const window = domino.createWindow(template);
 global['window'] = window;
 global['document'] = window.document;
+global['self'] = window
+global['IDBIndex'] = window.IDBIndex
+global['document'] = window.document
+global['navigator'] = window.navigator
+global['getComputedStyle'] = window.getComputedStyle;
 
 (global as any).WebSocket = require('ws');
 (global as any).XMLHttpRequest = require('xhr2');
+
+import { AppServerModule } from './src/main.server';
+import { APP_BASE_HREF } from '@angular/common';
+import { existsSync } from 'fs';
+
+
+function shouldCompress(req, res) {
+  if (req.headers['x-no-compression']) {
+    // don't compress responses with this request header
+    return false;
+  }
+
+  // fallback to standard filter function
+  return compression.filter(req, res);
+}
+
+const mid = function mobile(req,res,next) {
+   var ua = parser(req.headers['user-agent']);
+   if(ua.device['type']=="mobile"){
+     res.redirect("http://mobile.iitbhusports.org/")
+   }
+   else{
+     next();
+   }
+ }
+
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
-  const distFolder = join(process.cwd(), 'dist/sports/browser');
+  const distFolder = join(process.cwd(), 'sports/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
+  server.use(compression({ filter: shouldCompress }));
+
+  server.use(mid);
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine('html', ngExpressEngine({
     bootstrap: AppServerModule,
@@ -54,7 +85,7 @@ export function app(): express.Express {
 }
 
 function run(): void {
-    const port = process.env.PORT || 4000;
+    const port = process.env.PORT || 80;
 
   // Start up the Node server
     const server = app();

@@ -12,7 +12,7 @@
 			<div class="l" routerLink='../'>
 				Team
 			</div>
-			<div class="l">
+			<div (click)="scrolling('contacts')" class="l">
 				Contacts
 			</div>
 			<div class="l">
@@ -21,14 +21,14 @@
 		</div>
 	</div>
 	<div class="text">
-		<h2><b>Badminton Club</b></h2>
+		<h2><b>Badminton Team</b></h2>
 		<h2>IIT BHU Varanasi</h2>
 		<h1>"Badminton is like ballet dancing, it requires a lot control,</h1>
 		<h1> strength, and mind-play and measured movement"</h1>
 
 	</div>
 </div>
-<div class="title">Captains and Vice-Captains</div>
+<div class="title" id='contacts'>Captains and Vice-Captains</div>
 <mat-grid-list cols=3 rowHeight='450px'>
 <mat-grid-tile>
 <div class='card'>
